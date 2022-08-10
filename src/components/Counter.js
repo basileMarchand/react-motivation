@@ -46,9 +46,15 @@ class Counter extends React.Component{
             <div className="Counter">
               <p>
                 <span> {this.state.timeFrom.days} days </span>
-                <span>{this.state.timeFrom.hours} hours</span>
+                {this.state.timeFrom.hours > 0 &&  
+                    <span>{this.state.timeFrom.hours} hours</span>
+                }
+                { this.state.timeFrom.minutes > 0 && 
+                <>
                 <span> and </span>
                 <span>{this.state.timeFrom.minutes} minutes</span>
+                </>
+                }
               </p>
               <p className="emoji">🔥👏</p>
             </div>
