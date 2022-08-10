@@ -1,4 +1,5 @@
 import React from "react";
+import "./Counter.css";
 
 class Counter extends React.Component{
     constructor( props ){
@@ -42,7 +43,7 @@ class Counter extends React.Component{
     
       render(){
         return (
-            <div>
+            <div className="Counter">
               <p>
                 <span> {this.state.timeFrom.days} days </span>
                 <span>{this.state.timeFrom.hours} hours</span>
